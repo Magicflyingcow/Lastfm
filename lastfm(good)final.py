@@ -86,7 +86,7 @@ def f(number,subject,days):
     plt.legend(fontsize=5,loc=2)    #size of legend font
     plt.grid(0,linestyle='--',alpha=0.5)
     plt.xlabel('Date')
-    plt.ylabel('Plays')
+    plt.ylabel('Scrobbles')
     startdate=datetime.utcfromtimestamp(int(line[0])).strftime('%Y-%m-%d')
     plt.title(f"{name}'s Top {number} {subject} Since {startdate}",fontsize=10)
     plt.savefig(f"{name}'s Top {number} {subject} Since {startdate}.png",dpi=800,bbox_inches='tight')
