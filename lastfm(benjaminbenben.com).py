@@ -7,7 +7,6 @@ artists='Artists';albums='Albums';tracks='Tracks'
 name='USERNAME'
 
 
-
 def f(number,subject,days):
     totaltime1=time.time()
     timedata=[];data=[]
@@ -33,7 +32,7 @@ def f(number,subject,days):
                 break
             
             n+=1
-            if line[column]=='': next(csv_reader);print(line)# will show albumless tracks
+            if line[column]=='': next(csv_reader);print(f"No album attributed to: {line[2]} - {line[0]}")# will show albumless tracks
             elif line[column] not in names:
                 names.append(line[column])
                 nums.append(1)
@@ -95,6 +94,3 @@ def f(number,subject,days):
     print(f"{totaltime2-plottime} seconds to plot data")
     print(f"{totaltime2-totaltime1} seconds overall")
     plt.clf()
-      
-
- 
